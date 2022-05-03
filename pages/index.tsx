@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   const [isTrue, setIsTrue] = useState<boolean>(false);
 
   return (
-    <div className="m-auto w-full max-w-xl">
+    <div className="m-auto w-full max-w-xl p-6">
       <ImageEditor {...{ text1, text2, text3 }} />
       <TextInput label="text1" text={text1} setText={setText1} />
       <TextInput label="text2" text={text2} setText={setText2} />
