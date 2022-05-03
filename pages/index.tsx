@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
+import ImageEditor from "../components/ImageEditor";
 
 const Home: NextPage = () => {
-  return <h1 className="text-3xl font-bold underline">hello world</h1>;
+  return (
+    <div className="m-auto w-full max-w-xl">
+      <ImageEditor />
+    </div>
+  );
 };
 
 export default Home;
