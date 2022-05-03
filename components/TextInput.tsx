@@ -15,7 +15,7 @@ const TextInput: FC<TextInputProps> = ({
     <label className="mt-8 block">
       <span className="block text-gray-400">{label}</span>
       <input
-        className=" w-full border-b text-2xl outline-none focus:border-b-blue-400"
+        className="w-full border-b text-2xl outline-none focus:border-b-blue-400"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
