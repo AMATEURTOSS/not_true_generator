@@ -2,8 +2,6 @@ import { FC, CSSProperties } from "react";
 
 interface ImageEditorProps {
   text1: string;
-  text2: string;
-  text3: string;
 }
 
 const bannerHideDivStyle: CSSProperties = {
@@ -29,11 +27,11 @@ const text1HideDivStyle: CSSProperties = {
   backgroundColor: "#fff",
 };
 
-const ImageEditor: FC<ImageEditorProps> = (props): JSX.Element => {
+const ImageEditor: FC<ImageEditorProps> = ({ text1 }): JSX.Element => {
   return (
     <div className="relative">
       <div style={bannerHideDivStyle} />
-      <div style={text1HideDivStyle}>{props.text1}</div>
+      <div style={text1HideDivStyle}>{text1}</div>
       <img src="/not_true.png" alt="not_true" className="w-full" />
     </div>
   );
