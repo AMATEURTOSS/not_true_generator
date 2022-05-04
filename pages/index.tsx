@@ -5,6 +5,7 @@ import domtoimage from "dom-to-image";
 import ImageEditor from "../components/ImageEditor";
 import TextInput from "../components/TextInput";
 import SelectTwoOfOneButton from "../components/SelectTwoOfOneButton";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   const [text1, setText1] = useState<string>(
@@ -38,7 +39,7 @@ const Home: NextPage = () => {
       <Head>
         <title>사실이 아닙니다! 생성기</title>
       </Head>
-      <div className="m-auto w-full max-w-xl p-6">
+      <main className="m-auto h-screen w-full max-w-xl p-6">
         <ImageEditor text1={text1} isTrue={isTrue} />
         <TextInput label="text1" text={text1} setText={setText1} />
         <SelectTwoOfOneButton
@@ -53,7 +54,8 @@ const Home: NextPage = () => {
         >
           저장하기
         </button>
-      </div>
+      </main>
+      <Footer />
     </>
   );
 };

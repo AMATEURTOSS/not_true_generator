@@ -14,6 +14,11 @@ export default function Document() {
         <meta name="twitter:image" content="favicon.png" />
         <meta name="twitter:description" content="사실이 아닙니다! 생성기" />
         <meta name="theme-color" content="#6495ED" />
+        {/* Remixicon Icon */}
+        <link
+          href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+          rel="stylesheet"
+        />
         {/* Google Analytics */}
         <script
           async
