@@ -9,7 +9,7 @@ export default function Document() {
         <meta name="description" content="사실이 아닙니다! 생성기" />
         <meta property="og:title" content="사실이 아닙니다! 생성기" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="favicon.png" />
+        <meta property="og:image" content="og_image.png" />
         <meta property="og:description" content="사실이 아닙니다! 생성기" />
         <meta name="twitter:image" content="favicon.png" />
         <meta name="twitter:description" content="사실이 아닙니다! 생성기" />
