@@ -2,6 +2,7 @@ import { FC, CSSProperties } from "react";
 
 interface ImageEditorProps {
   text1: string;
+  isTrue: boolean;
 }
 
 const bannerHideDivStyle: CSSProperties = {
@@ -50,13 +51,28 @@ const text3HideDivStyle: CSSProperties = {
   backgroundColor: "#191F2E",
 };
 
-const ImageEditor: FC<ImageEditorProps> = ({ text1 }): JSX.Element => {
+const isTrueDivStyle: CSSProperties = {
+  position: "absolute",
+  top: "75%",
+  left: "10%",
+  width: "80%",
+  height: "19%",
+  fontSize: "clamp(1rem, 10vw, 4rem)",
+  textAlign: "center",
+  color: "white",
+  backgroundColor: "#82978A",
+};
+
+const ImageEditor: FC<ImageEditorProps> = ({ text1, isTrue }): JSX.Element => {
   return (
     <div className="relative overflow-hidden">
       <div style={bannerHideDivStyle} />
       <div style={text1HideDivStyle}>{text1}</div>
       <div style={text2HideDivStyle} />
       <div style={text3HideDivStyle} />
+      <div style={isTrueDivStyle}>
+        {isTrue ? "사실이 맞습니다!" : "사실이 아닙니다!"}
+      </div>
       <img src="/not_true.png" alt="not_true" className="w-full" />
     </div>
   );
