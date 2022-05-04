@@ -51,7 +51,22 @@ const text3HideDivStyle: CSSProperties = {
   backgroundColor: "#191F2E",
 };
 
-const smileStyle: CSSProperties = {
+const smileLeftEyeBrow: CSSProperties = {
+  position: "absolute",
+  top: "36%",
+  left: "46%",
+  borderTopLeftRadius: "10px",
+  width: "5%",
+};
+
+const smileRightEyeBrow: CSSProperties = {
+  position: "absolute",
+  top: "35%",
+  left: "53%",
+  width: "6%",
+};
+
+const smileMouthStyle: CSSProperties = {
   position: "absolute",
   top: "45%",
   left: "50%",
@@ -78,7 +93,9 @@ const ImageEditor: FC<ImageEditorProps> = ({ text1, isTrue }): JSX.Element => {
         <div style={text1HideDivStyle}>{text1}</div>
         <div style={text2HideDivStyle} />
         <div style={text3HideDivStyle} />
-        {isTrue && <img src="smile.svg" alt="" style={smileStyle} />}
+        {isTrue && <img src="eye_brow.svg" alt="" style={smileLeftEyeBrow} />}
+        {isTrue && <img src="eye_brow.svg" alt="" style={smileRightEyeBrow} />}
+        {isTrue && <img src="smile.svg" alt="" style={smileMouthStyle} />}
         <div style={isTrueDivStyle}>
           {isTrue ? "사실이 맞습니다!" : "사실이 아닙니다!"}
         </div>
