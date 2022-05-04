@@ -65,7 +65,7 @@ const isTrueDivStyle: CSSProperties = {
 
 const ImageEditor: FC<ImageEditorProps> = ({ text1, isTrue }): JSX.Element => {
   return (
-    <div className="relative overflow-hidden">
+    <div id="image" className="relative overflow-hidden">
       <div style={bannerHideDivStyle} />
       <div style={text1HideDivStyle}>{text1}</div>
       <div style={text2HideDivStyle} />
