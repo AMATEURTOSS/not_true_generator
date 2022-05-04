@@ -65,15 +65,17 @@ const isTrueDivStyle: CSSProperties = {
 
 const ImageEditor: FC<ImageEditorProps> = ({ text1, isTrue }): JSX.Element => {
   return (
-    <div id="image" className="relative overflow-hidden">
-      <div style={bannerHideDivStyle} />
-      <div style={text1HideDivStyle}>{text1}</div>
-      <div style={text2HideDivStyle} />
-      <div style={text3HideDivStyle} />
-      <div style={isTrueDivStyle}>
-        {isTrue ? "사실이 맞습니다!" : "사실이 아닙니다!"}
+    <div id="image">
+      <div className="relative overflow-hidden">
+        <div style={bannerHideDivStyle} />
+        <div style={text1HideDivStyle}>{text1}</div>
+        <div style={text2HideDivStyle} />
+        <div style={text3HideDivStyle} />
+        <div style={isTrueDivStyle}>
+          {isTrue ? "사실이 맞습니다!" : "사실이 아닙니다!"}
+        </div>
+        <img src="/not_true.png" alt="not_true" className="w-full" />
       </div>
-      <img src="/not_true.png" alt="not_true" className="w-full" />
     </div>
   );
 };
