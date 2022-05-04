@@ -12,6 +12,7 @@ const Home: NextPage = () => {
     "n번방 방지법은 사적검열 우려가 있다?"
   );
   const [isTrue, setIsTrue] = useState<boolean>(false);
+  const [isSmile, setIsSmile] = useState<boolean>(false);
 
   function save() {
     const image = document.getElementById("image");
@@ -40,13 +41,21 @@ const Home: NextPage = () => {
         <title>사실이 아닙니다! 생성기</title>
       </Head>
       <main className="m-auto h-screen w-full max-w-xl p-6">
-        <ImageEditor text1={text1} isTrue={isTrue} />
-        <TextInput label="text1" text={text1} setText={setText1} />
+        <ImageEditor text1={text1} isTrue={isTrue} isSmile={isSmile} />
+        <TextInput label="텍스트" text={text1} setText={setText1} />
         <SelectTwoOfOneButton
+          label="사실 여부"
           button1InnerText="사실이 아닙니다!"
           button2InnerText="사실이 맞습니다!"
           isTrue={isTrue}
           setIsTrue={setIsTrue}
+        />
+        <SelectTwoOfOneButton
+          label="표정"
+          button1InnerText="정색"
+          button2InnerText="웃음"
+          isTrue={isSmile}
+          setIsTrue={setIsSmile}
         />
         <button
           className="mt-8 w-full bg-blue-400 p-3 text-white"

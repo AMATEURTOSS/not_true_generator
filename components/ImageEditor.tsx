@@ -3,6 +3,7 @@ import { FC, CSSProperties } from "react";
 interface ImageEditorProps {
   text1: string;
   isTrue: boolean;
+  isSmile: boolean;
 }
 
 const bannerHideDivStyle: CSSProperties = {
@@ -85,7 +86,11 @@ const isTrueDivStyle: CSSProperties = {
   backgroundColor: "#82978A",
 };
 
-const ImageEditor: FC<ImageEditorProps> = ({ text1, isTrue }): JSX.Element => {
+const ImageEditor: FC<ImageEditorProps> = ({
+  text1,
+  isTrue,
+  isSmile,
+}): JSX.Element => {
   return (
     <div id="image">
       <div className="relative overflow-hidden">
@@ -93,9 +98,9 @@ const ImageEditor: FC<ImageEditorProps> = ({ text1, isTrue }): JSX.Element => {
         <div style={text1HideDivStyle}>{text1}</div>
         <div style={text2HideDivStyle} />
         <div style={text3HideDivStyle} />
-        {isTrue && <img src="eye_brow.svg" alt="" style={smileLeftEyeBrow} />}
-        {isTrue && <img src="eye_brow.svg" alt="" style={smileRightEyeBrow} />}
-        {isTrue && <img src="smile.svg" alt="" style={smileMouthStyle} />}
+        {isSmile && <img src="eye_brow.svg" alt="" style={smileLeftEyeBrow} />}
+        {isSmile && <img src="eye_brow.svg" alt="" style={smileRightEyeBrow} />}
+        {isSmile && <img src="smile.svg" alt="" style={smileMouthStyle} />}
         <div style={isTrueDivStyle}>
           {isTrue ? "사실이 맞습니다!" : "사실이 아닙니다!"}
         </div>

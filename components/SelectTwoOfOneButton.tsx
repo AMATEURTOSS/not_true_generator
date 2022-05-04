@@ -1,6 +1,7 @@
 import { Dispatch, FC, SetStateAction, useEffect, useRef } from "react";
 
 interface SelectTwoOfOneButtonProps {
+  label: string;
   button1InnerText: string;
   button2InnerText: string;
   isTrue: boolean;
@@ -8,6 +9,7 @@ interface SelectTwoOfOneButtonProps {
 }
 
 const SelectTwoOfOneButton: FC<SelectTwoOfOneButtonProps> = ({
+  label,
   button1InnerText,
   button2InnerText,
   isTrue,
@@ -18,7 +20,7 @@ const SelectTwoOfOneButton: FC<SelectTwoOfOneButtonProps> = ({
 
   return (
     <div className="mt-6">
-      <span className="block text-gray-400">사실 여부</span>
+      <span className="block text-gray-400">{label}</span>
       <div className="flex items-center">
         <button
           className={`w-1/2 border p-3 ${
