@@ -40,7 +40,7 @@ const Home: NextPage = () => {
       <Head>
         <title>사실이 아닙니다! 생성기</title>
       </Head>
-      <main className="m-auto h-screen w-full max-w-xl p-6">
+      <main className="m-auto min-h-screen w-full max-w-xl p-6">
         <ImageEditor text1={text1} isTrue={isTrue} isSmile={isSmile} />
         <TextInput label="텍스트" text={text1} setText={setText1} />
         <SelectTwoOfOneButton
